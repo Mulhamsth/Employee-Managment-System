@@ -72,7 +72,7 @@ namespace EmployeeTable
         private void UIAdd()
         {
             Console.Write("ID:\t");
-            int id = Convert.ToInt32(Console.ReadLine());
+            string id = Console.ReadLine();
             Console.Write("Firstname:\t");
             string fname = Console.ReadLine();
             Console.Write("Lastname:\t");
@@ -82,9 +82,9 @@ namespace EmployeeTable
         private void UIEdit()
         {
             Console.Write("Old ID:\t");
-            int OldID = Convert.ToInt32(Console.ReadLine());
+            string OldID = Console.ReadLine();
             Console.Write("New ID:\t");
-            int NewID = Convert.ToInt32(Console.ReadLine());
+            string NewID = Console.ReadLine();
             Console.Write("Firstname:\t");
             string fname = Console.ReadLine();
             Console.Write("Lastname:\t");
@@ -94,14 +94,14 @@ namespace EmployeeTable
         private void UIDelete()
         {
             Console.Write("ID:\t");
-            int id = Convert.ToInt32(Console.ReadLine());
+            string id = Console.ReadLine();
             et.Delete(id);
         }
     }
 
     class Employee
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
 
@@ -113,12 +113,24 @@ namespace EmployeeTable
     }
     class EmployeeTable
     {
-        List<Employee> list = new List<Employee>();
+        List<Employee> employees = new List<Employee>();
         public string file;
+
+        public Employee employee(string id)
+        {
+            for (int i = 0; i < employees.Count; i++)
+            {
+                Employee emp = employees[i];
+                if (emp.ID == id)
+                    return emp;
+            }
+
+            return null;
+        }
 
         public void Display()       //displayes the list of Employees
         {
-            foreach(Employee e in list)
+            foreach(Employee e in employees)
                 Console.WriteLine(e.ToString(" "));
         }
 
@@ -130,50 +142,42 @@ namespace EmployeeTable
                 {
                     string[] teile = sr.ReadLine().Split(';');
                     Employee emp = new Employee();
-                    emp.ID = Convert.ToInt32(teile[0]);
+                    emp.ID = teile[0];
                     emp.FName = teile[1];
                     emp.LName = teile[2];
-                    list.Add(emp);
+                    employees.Add(emp);
                 }
             }
         }
-        public void Edit(int OldID, int NewID, string fname, string lname) //To change the data of an Employee
+        public void Edit(string OldID, string NewID, string fname, string lname) //To change the data of an Employee
         {
-            for (int i = 0; i < list.Count; i++)
-            {
-                Employee emp = list[i];
-                if (emp.ID == OldID)
-                {
-                    emp.ID = NewID;
-                    emp.FName = fname;
-                    emp.LName = lname;
-                }
-            }
+            Employee emp = employee(OldID);
+            if (NewID != "")
+                emp.ID = NewID;
+            if (fname != "")
+                emp.FName = fname;
+            if (lname != "")
+                emp.LName = lname;
         }
-        public void Add(int id, string fname, string lname)     //To add a new Employee
+        public void Add(string id, string fname, string lname)     //To add a new Employee
         {
             Employee emp = new Employee();
             emp.ID = id;
             emp.FName = fname;
             emp.LName = lname;
-            list.Add(emp);
+            employees.Add(emp);
         }
 
-        public void Delete(int id)      //To delete an Employee
+        public void Delete(string id)      //To delete an Employee
         {
-            for (int i = 0; i < list.Count; i++)
-            {
-                Employee emp = list[i];
-                if (emp.ID == id)
-                    list.Remove(emp);
-            }
+            employees.Remove(employee(id));
 
         }
         public void save()      //to save the changes to the txt file
         {
             using(StreamWriter sw = new StreamWriter(file))
             {
-                foreach(Employee e in list)
+                foreach(Employee e in employees)
                     sw.WriteLine(e.ToString(";"));
             }
         }
