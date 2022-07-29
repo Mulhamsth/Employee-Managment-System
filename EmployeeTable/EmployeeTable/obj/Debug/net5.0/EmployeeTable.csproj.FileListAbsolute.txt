@@ -1,0 +1,16 @@
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.exe
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.deps.json
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.runtimeconfig.json
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.runtimeconfig.dev.json
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.dll
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\bin\Debug\net5.0\EmployeeTable.pdb
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.csproj.AssemblyReference.cache
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.AssemblyInfoInputs.cache
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.AssemblyInfo.cs
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.csproj.CoreCompileInputs.cache
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.dll
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\refint\EmployeeTable.dll
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.pdb
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\EmployeeTable.genruntimeconfig.cache
+C:\Users\Mulhamsth\Bitbucket\myprojects\EmployeeTable\EmployeeTable\obj\Debug\net5.0\ref\EmployeeTable.dll
